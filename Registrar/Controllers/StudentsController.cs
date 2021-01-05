@@ -21,13 +21,33 @@ namespace Registrar.Controllers
       return View(_db.Students.ToList());
     }
 
+    public ActionResult Create()
+    {
+      ViewBag.CourseId = new SelectList (_db.Courses, "CourseId", "Name");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Student student, int CourseId)
+    {
+      _db.Students.Add(student);
+      if (CourseId != 0)
+      {
+        _db.Enrollments.Add(new Enrollments() { CourseId = CourseId, StudentId = student.StudentId});
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
     public ActionResult Details(int id)
     {
       var thisStudent = _db.Students
         .Include(student => student.Courses)
         .ThenInclude(join => join.Course)
-        .FirstOrDefault(student = > student.StudentId == id);
+        .FirstOrDefault(student => student.StudentId == id);
       return View(thisStudent);
     }
+
+
   }
 }
