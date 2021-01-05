@@ -5,7 +5,7 @@
 @model Registrar.Models.Course
 
 <h2>Edit </h2>
-
+<hr/>
 <h2> Edit Courses: @Html.DisplayFor(model => model.CourseName)</h2>
 
 @using (Html.BeginForm())
@@ -20,4 +20,5 @@
 
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to courses", "Index")</p>
+<p>@Html.ActionLink("Back to Course List", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

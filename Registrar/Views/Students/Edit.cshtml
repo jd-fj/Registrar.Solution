@@ -5,14 +5,14 @@
 @model Registrar.Models.Student
 
 <h2>Edit</h2>
-
-<h2>Edit this student: @Html.DisplayFor(model => model.StudentName) </h2>
+<hr/>
+<h2>Edit this Student: @Html.DisplayFor(model => model.StudentName) </h2>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StudentId)
 
-  @Html.LabelFor(model => model.StudentName)
+  @Html.Label("Student Name")
   @Html.EditorFor(model => model.StudentName)
 
   @Html.Label("Select courses")
@@ -21,4 +21,5 @@
   <input type="submit" value="save" />
 }
 
-<p>@Html.ActionLink("Back to studen list", "Index")</p>
+<p>@Html.ActionLink("Back to Student List", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

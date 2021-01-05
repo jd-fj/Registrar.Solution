@@ -4,10 +4,9 @@
 
 @model Registrar.Models.Student
 <h2>Student Details</h2>
-<h2>@Html.DisplayNameFor(model => model.StudentName): @Html.DisplayFor(model => model.StudentName)</h2>
-<h2>@Html.DisplayNameFor(model => model.EnrollDate): @Html.DisplayFor(model => model.EnrollDate)</h2>
-
-
+<hr/>
+<h2>Student Name: @Html.DisplayFor(model => model.StudentName)</h2>
+<h2>Date of Enrollment: @Html.DisplayFor(model => model.EnrollDate)</h2>
 @if(@Model.Courses.Count == 0)
 {
   <p>This student is not currently enrolled in any courses.</p>
@@ -23,5 +22,8 @@ else
   </ul>
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Student", "Edit", new { id = Model.StudentId })</p>
+<p>@Html.ActionLink("Delete Student", "Delete", new { id = Model.StudentId })</p>
+<p>@Html.ActionLink("Enroll in a Course", "AddCourse", new { id = Model.StudentId })</p>
+<p>@Html.ActionLink("Back to Student List", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
