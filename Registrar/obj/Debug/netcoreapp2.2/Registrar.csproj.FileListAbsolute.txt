@@ -28,3 +28,4 @@
 /Users/taylordelph/Desktop/Epicodus/Registrar.Solution/Registrar/obj/Debug/netcoreapp2.2/Razor/Views/Students/Edit.g.cshtml.cs
 /Users/taylordelph/Desktop/Epicodus/Registrar.Solution/Registrar/obj/Debug/netcoreapp2.2/Razor/Views/Courses/Index.g.cshtml.cs
 /Users/taylordelph/Desktop/Epicodus/Registrar.Solution/Registrar/obj/Debug/netcoreapp2.2/Razor/Views/Courses/Create.g.cshtml.cs
+/Users/taylordelph/Desktop/Epicodus/Registrar.Solution/Registrar/obj/Debug/netcoreapp2.2/Razor/Views/Courses/Details.g.cshtml.cs
