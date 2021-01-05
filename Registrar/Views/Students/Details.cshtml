@@ -5,6 +5,8 @@
 @model Registrar.Models.Student
 <h2>Student Details</h2>
 <h2>@Html.DisplayNameFor(model => model.StudentName): @Html.DisplayFor(model => model.StudentName)</h2>
+<h2>@Html.DisplayNameFor(model => model.EnrollDate): @Html.DisplayFor(model => model.EnrollDate)</h2>
+
 
 @if(@Model.Courses.Count == 0)
 {
